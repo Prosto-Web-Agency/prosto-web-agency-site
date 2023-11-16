@@ -70,7 +70,7 @@ export default function Header() {
             <div className="gap-[90px] lg:gap-3 pt-1 justify-center items-center hidden md:flex">
                 {
                     LINKS.map(({ href, name }: tLinks) => (
-                        <Link href={`${href}`} className='text-white'>
+                        <Link href={`${href}`} key={name} className='text-white'>
                             {name}
                         </Link>
                     ))
