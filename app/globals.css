@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        scroll-behavior: smooth !important;
+    }
+}
+
+
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -16,11 +23,116 @@
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html,
 body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-            to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))
-    ) rgb(var(--background-start-rgb));
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: black;
+    
+}
+
+
+body {
+    --black: #000000;
+    --ash-black: #222;
+    --white: #fafafa;
+    --sky: #00ccff;
+    --green: #22dddd;
+    --blue: #1300ff;
+    --dusk: #6600ff;
+    --purple: #9900ff;
+    --pink: #ff0066;
+    --red: #fe0222;
+    --orange: #fd7702;
+    --yellow: #ffbb00;
+
+    --background: var(--yellow);
+    --accent: var(--black);
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.white-input:active,
+.white-input:focus {
+    outline: none;
+    color: white;
+    font-size: 32px;
+}
+
+.white-input {
+    color: white !important;
+    transition: 0.5s;
+}
+
+.white-input-container input {
+    color: white !important;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+    background: white;
+}
+
+.container {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+canvas {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html, p, span, div, h1, h2, h3, h4, a, button {
+    font-family: Pragmatica, 'sans-serif';
+}
+
+@font-face {
+    font-family: Pragmatica;
+    font-weight: 700;
+    src: url('/fonts/woff/PragmaticaExtraBold.woff') format("woff"),
+        url('/fonts/ttf/PragmaticaExtraBold.ttf') format("ttf"),
+        url('/fonts/otf/PragmaticaExtraBold.otf') format("otf");
+}
+@font-face {
+    font-family: Pragmatica;
+    font-weight: 500;
+    src: url('/fonts/woff/Pragmatica.woff') format("woff"),
+        url('/fonts/ttf/Pragmatica.ttf') format("ttf"),
+        url('/fonts/otf/Pragmatica.otf') format("otf");
+}
+@font-face {
+    font-family: Pragmatica;
+    font-weight: 300;
+    src: url('/fonts/woff/PragmaticaExtraLight.woff') format("woff"),
+        url('/fonts/ttf/PragmaticaExtraLight.ttf') format("ttf"),
+        url('/fonts/otf/PragmaticaExtraLight.otf') format("otf");
 }
