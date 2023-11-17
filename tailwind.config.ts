@@ -35,6 +35,7 @@ const config: Config = {
                 'heading-64-bold': ['64px', { fontWeight: '700', lineHeight: '64px' }],
                 'heading-thin-xl': ['100px', { fontWeight: '200' }],
                 'heading-pre-xl': ['60px', { fontWeight: '400', lineHeight: '50px' }],
+                'heading-prepre-xl': ['50px', { fontWeight: '500', lineHeight: '50px' }],
                 'heading-l': ['40px', { fontWeight: '500', lineHeight: '40px' }],
                 'heading-l-light': ['40px', { fontWeight: '300', lineHeight: '40px' }],
                 'heading-l-bold': ['35px', { fontWeight: '500', lineHeight: '30px' }],
@@ -45,11 +46,12 @@ const config: Config = {
                 ],
 
                 '160': ['160px', { fontWeight: '300', lineHeight: '160px' }],
-                'text-m': ['20px', { fontWeight: '500', lineHeight: '20px' }],
+                'text-m': ['20px', { fontWeight: '500', lineHeight: '24px' }],
                 'text-m-long': ['18px', { fontWeight: '300' }],
-                'text-l': ['24px', { fontWeight: 'Regular', lineHeight: '28px' }],
+                'text-l': ['24px', { fontWeight: '500', lineHeight: '28px' }],
                 'text-l-light': ['20px', { fontWeight: '300', lineHeight: '24px' }],
-                'text-l-light-m': ['16px', { fontWeight: '300', lineHeight: '24px' }],
+                'text-l-light-m': ['16px', { fontWeight: '300', lineHeight: '24px' }], 
+                'text-l-m-m': ['16px', { fontWeight: '500', lineHeight: '24px' }], 
             },
             filter: { 'white-icon': 'brightness(0) invert(1)' },
             spacing: {

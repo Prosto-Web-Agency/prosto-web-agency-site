@@ -1,6 +1,6 @@
 export default function PreviewBlock() {
     return (
-        <section className='w-screen overflow-hidden h-screen flex flex-col justify-end items-center' style={{ background: 'url(/backgroundMain.png) center/cover no-repeat' }}>
+        <section className='w-screen overflow-hidden h-screen flex flex-col justify-end items-center' style={{ background: 'url(/backgroundMain.png) 50% 80%/cover no-repeat' }}>
 
             <div className="w-full h-[calc(100vh-100px)] pb-10 text-white flex flex-col justify-around items-center">
                 <div>

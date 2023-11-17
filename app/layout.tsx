@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Header from '../components/common/header/header';
+import Header from '../components/common/header/Header';
 import Footer from '@/components/common/footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -17,9 +17,7 @@ export default function RootLayout({ children }: {
     return ( 
         <html lang="en" className='overflow-x-hidden'>
             <body className={inter.className}>
-                <Header />
                 {children}
-                <Footer />
             </body>
         </html>
     );

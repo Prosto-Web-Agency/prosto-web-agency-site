@@ -1,25 +1,3 @@
-'use client'
-
-import Image from "next/image";
-import Link from "next/link";
-
-type TSocial = {
-    name: string
-    phone: string
-}
-
-export const SOCIAL: TSocial[] = [
-    {
-        name: 'Лавров Лев',
-        phone: '+7-996-324-04-98'
-    },
-    {
-        name: 'Дьяченко Данил',
-        phone: '+7-999-501-05-02'
-    },
-]
-
-
 export default function Footer() {
     return (
         <footer className="min-h-[300px] max-w-[1400px] w-screen md:pl-10 pl-3 flex flex-col md:justify-around justify-between items-center text-white">
@@ -36,7 +14,7 @@ export default function Footer() {
                         </div>
                         <div className="text-text-m-long flex justify-between">
                             <span>
-                            Дьяченко Данил
+                                Дьяченко Данил
                             </span>
 
                             <a href='tel:79995010502'>+7-999-501-05-02</a>
@@ -72,5 +50,5 @@ export default function Footer() {
                 </span>
             </div>
         </footer>
-    )
-}
+    );
+};

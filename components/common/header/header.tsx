@@ -8,39 +8,39 @@ import Link from 'next/link';
 const path01Variants = {
     open: { d: 'M3.06061 2.99999L21.0606 21' },
     closed: { d: 'M0 9.5L24 9.5' },
-}
+};
 const path02Variants = {
     open: { d: 'M3.00006 21.0607L21 3.06064' },
     closed: { d: 'M0 14.5L24 14.5' },
-}
+};
 const path03Variants = {
     open: { d: 'M0 0L0 0', opacity: 0 },
     closed: { d: 'M0 19.5L24 19.5', opacity: 1 },
-}
+};
 
 type tLinks = {
     href: string,
     name: string
-}
+};
 
 const LINKS: tLinks[] = [
     {
         href: '/',
-        name: 'ГЛАВНАЯ'
+        name: 'ГЛАВНАЯ',
     },
     {
         href: '/',
-        name: 'О НАС'
+        name: 'О НАС',
     },
     {
         href: '/',
-        name: 'ПРОЕКТЫ'
+        name: 'ПРОЕКТЫ',
     },
     {
         href: '/',
-        name: 'КОНТАКТЫ'
+        name: 'КОНТАКТЫ',
     },
-]
+];
 
 export default function Header() {
 
@@ -52,7 +52,7 @@ export default function Header() {
 
     const changeMenuState = async (e: boolean) => {
         setOpen(!isOpen);
-        setOpenMenu(e)
+        setOpenMenu(e);
 
         if (!isOpen) {
             path01Controls.start(path01Variants.open);
@@ -66,7 +66,7 @@ export default function Header() {
     };
 
     return (
-        <header className="w-full bg-transparent absolute z-10 mx-auto mt-10 py-5">
+        <header className="w-full bg-transparent fixed z-10 mx-auto mt-10 py-5">
             <div className="gap-[90px] lg:gap-3 pt-1 justify-center items-center hidden md:flex">
                 {
                     LINKS.map(({ href, name }: tLinks) => (
@@ -85,6 +85,7 @@ export default function Header() {
                     <motion.path
                         {...path01Variants.closed}
                         animate={path01Controls}
+
                         transition={{ duration: 0.7 }}
                         stroke='#FFFFFF'
                         strokeWidth='2'
@@ -109,10 +110,10 @@ export default function Header() {
             <>
                 {
                     openMenu
-                        ? <HeaderMenu openMenu={openMenu} />
+                        ? <HeaderMenu />
                         : null
                 }
             </>
         </header>
     );
-}
+};
