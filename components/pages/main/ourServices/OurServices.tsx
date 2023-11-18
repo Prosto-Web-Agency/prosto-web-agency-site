@@ -1,3 +1,4 @@
+import TitleMain from "@/components/common/Title/TitleMain";
 import EmptyCard from "@/components/common/cards/EmptyCard";
 import SpiralBackground from "@/public/spiralBack";
 
@@ -35,21 +36,17 @@ export type tServices = {
 
 export default function OurServices() {
     return (
-        <section  className=" w-full flex flex-col items-center md:p-10 p-5 relative text-white md:py-40 py-40">
+        <section className=" w-full flex flex-col items-center md:p-10 p-5 relative text-white md:py-40 py-40">
             <div className="flex flex-col items-start justify-start max-w-[1400px]">
-                    <div className="flex justify-start">
-                        <div className="h-[100px] flex items-start md:text-heading-prepre-xl text-heading-l-bold">
-                            НАШИ УСЛУГИ
-                        </div>
-                    </div>
+                <TitleMain text={'НАШИ УСЛУГИ'} />
 
-                    <div className="flex flex-wrap justify-start items-start gap-6 max-w-[1400px]">
-                        {
-                            SERVICES.map(({ name, description }: tServices) => (
-                                <EmptyCard name={name} description={description} />
-                            ))
-                        }
-                    </div>
+                <div className="flex flex-wrap justify-start items-start gap-6 max-w-[1400px]">
+                    {
+                        SERVICES.map(({ name, description }: tServices) => (
+                            <EmptyCard key={name} name={name} description={description} />
+                        ))
+                    }
+                </div>
             </div>
 
             <div className="absolute top-[-270px] right-0">
