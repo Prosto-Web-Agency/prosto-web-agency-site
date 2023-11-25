@@ -67,10 +67,10 @@ export default function Header() {
 
     return (
         <header className="w-full bg-transparent fixed z-10 mx-auto mt-10 py-5">
-            <div className="gap-[90px] lg:gap-3 pt-1 justify-center items-center hidden md:flex">
+            <div className="gap-[90px] text-text-l-light pt-1 justify-center items-start hidden md:flex">
                 {
                     LINKS.map(({ href, name }: tLinks) => (
-                        <Link href={`${href}`} key={name} className='text-white'>
+                        <Link href={`${href}`} key={name} className='text-white hover:text-green hover:border-b-2 hover:border-green'>
                             {name}
                         </Link>
                     ))

@@ -1,14 +1,27 @@
+'use client';
+
 import TitleMain from "@/components/common/Title/TitleMain";
 import Image from "next/image";
+import { motion, useInView } from 'framer-motion';
+import Link from 'next/link';
+import { useRef, useState } from 'react';
+import { storage } from '@/utils/localStorage';
+
+export const SEND_FORM_URL =
+    'https://prosto-web.agency/django_prosto/send_form/';
+
+export const COUNT_OF_SENDED_FORMS = 'COUNT_OF_SENDED_FORMS';
+export const MAX_COUNT_OF_SENDED_FORMS = 5;
 
 export default function OurProject() {
+
     return (
         <div className=" w-full flex flex-col items-center md:p-10 p-5 relative text-white md:py-40 py-40">
             <div className="flex flex-col items-start justify-start max-w-[1400px] w-full">
                 <TitleMain text={'НАШИ ПРОЕКТЫ'} />
-                <div className="grid xl:grid-cols-3 xl:gap-4 w-full max-w-[1400px] max-h-[1200px]">
+                <div className="xl:grid xl:grid-cols-3 xl:gap-4 xl:w-full xl:max-w-[1400px] xl:max-h-[1200px] flex flex-col gap-4 mx-auto">
 
-                    <div className="border-2 p-8 border-white rounded-4 flex flex-col justify-start">
+                    <div className="border-2 p-8 border-white rounded-4 flex flex-col justify-start xl:h-full h-[300px]">
                         <div className="w-full flex justify-start absolute">
                             <div className="md:text-text-l text-text-l-m-m rounded-[100px] text-black md:px-6 px-4 py-2 bg-green flex justify-center items-center gap-3 relative">
                                 <Image src='/ourProjects/Quado.png'
@@ -19,7 +32,7 @@ export default function OurProject() {
                                 QUADO
                             </div>
                         </div>
-                        <div className="text-heading-ll-bold h-full flex items-center">
+                        <div className="xl:text-heading-ll-bold text-heading-light-l h-full flex items-center">
                             ВЕБСАЙТ <br />
                             ДЛЯ СТУДИИ <br />
                             РАЗРАБОТКИ QUADO
@@ -99,6 +112,7 @@ export default function OurProject() {
                         <div className="absolute">
                             <div className="flex items-end">
                                 <Image src='/ourProjects/SuperStar.png'
+                                    className="xl:scale-100 scale-50"
                                     width={105}
                                     height={105}
                                     alt='Quado'
@@ -106,18 +120,19 @@ export default function OurProject() {
                             </div>
                         </div>
 
-                        <div className="w-full h-full text-heading-prepre-xl flex justify-center items-center">
+                        <div className="w-full h-full text-heading-l  flex justify-between items-center">
                             <Image src='/ourProjects/yourProjectPart.png'
-                                width={350}
+                                className="hidden xl:block"
+                                width={250}
                                 height={200}
                                 alt='Quado'
                             />
-                            <div className="ml-[-100px]">
+                            <div className="">
                                 ТУТ МОЖЕТ БЫТЬ ВАШ ПРОЕКТ
                             </div>
                             <Image src='/ourProjects/yourProjectPart.png'
-                                className="rotate-180 ml-[-150px]"
-                                width={350}
+                                className="rotate-180 hidden xl:block"
+                                width={250}
                                 height={200}
                                 alt='Quado'
                             />

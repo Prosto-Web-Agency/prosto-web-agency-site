@@ -36,7 +36,7 @@ const config: Config = {
                 'heading-thin-xl': ['100px', { fontWeight: '200' }],
                 'heading-pre-xl': ['60px', { fontWeight: '500', lineHeight: '50px' }],
                 'heading-prepre-xl': ['50px', { fontWeight: '500', lineHeight: '50px' }],
-                'heading-l': ['40px', { fontWeight: '500', lineHeight: '40px' }],
+                'heading-l': ['40px', { fontWeight: '500', lineHeight: '42px' }],
                 'heading-l-light': ['40px', { fontWeight: '300', lineHeight: '40px' }],
                 'heading-l-bold': ['35px', { fontWeight: '500', lineHeight: '30px' }],
                 'heading-ll-bold': ['35px', { fontWeight: '300', lineHeight: '40px' }],
