@@ -66,7 +66,7 @@ export default function Header() {
     };
 
     return (
-        <header className="w-full bg-transparent fixed z-10 mx-auto mt-10 py-5">
+        <header className="w-full fixed z-10 mx-auto pt-10 py-5 backdrop-blur">
             <div className="gap-[90px] text-text-l-light pt-1 justify-center items-start hidden md:flex">
                 {
                     LINKS.map(({ href, name }: tLinks) => (

@@ -11,7 +11,6 @@ import {
     SEND_FORM_URL,
 } from '@/components/pages/main/ourProjects/OurProjects';
 import QUPhoneNumberTextField from '@/components/common/textFields/QUPhoneNumberTextField';
-import QUNumberTextField from '@/components/common/textFields/QUNumberTextField';
 
 export default function ContactUs() {
     const [name, setName] = useState('');
@@ -27,7 +26,7 @@ export default function ContactUs() {
     function sendForm() {
         const formData = {
             name,
-            tnumber: contact,
+            tnumber: phone,
             content: description,
         };
 
